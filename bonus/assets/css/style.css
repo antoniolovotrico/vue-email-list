@@ -8,7 +8,6 @@ body{
     display: flex;
     height: 612px;
     width: 612px;
-    background-color: blue;
     flex-wrap: wrap;
 }
 
@@ -17,5 +16,12 @@ body{
     height: 100px;
     width: 100px;
     
+}
+
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
 }
 

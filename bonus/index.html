@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="app">
-            <div v-for="(num,i) in numArr" class="square" @click="showFunc(i)">
+            <div v-for="(num,i) in numArr" class="square" :class="num <= 5 && num >= 1 ?'yellow': num >5 && num < 10 ?'green': 'no color'" @click="showFunc(i)">
                 {{num}}
             </div>
 

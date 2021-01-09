@@ -10,13 +10,13 @@ let app = new Vue ({
     methods:{
         pushFunc:function() {
             for (let i = 0; i <= 35; i++){
-                this.numArr.push(i);
+                this.numArr.push("");
             }
         },
         showFunc:function(i){
             axios.get("https://flynn.boolean.careers/exercises/api/random/int")
             .then(response => {
-            console.log(response.data.response);
+            //console.log(response.data.response);
             let rndNum = response.data.response;
             this.numArr.splice(i,1,rndNum)
             })
