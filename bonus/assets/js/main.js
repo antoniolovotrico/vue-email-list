@@ -5,16 +5,24 @@ let app = new Vue ({
     },
     mounted(){
         this.pushFunc();
-        axios.get("https://flynn.boolean.careers/exercises/api/random/int")
-        .then(response => {
-            //console.log(response);
-        })
+        
     },
     methods:{
         pushFunc:function() {
             for (let i = 0; i <= 35; i++){
                 this.numArr.push(i);
             }
+        },
+        showFunc:function(i){
+            axios.get("https://flynn.boolean.careers/exercises/api/random/int")
+            .then(response => {
+            console.log(response.data.response);
+            let rndNum = response.data.response;
+            this.numArr.splice(i,1,rndNum)
+            })
         }
+                
+            
+        
     }
 })
