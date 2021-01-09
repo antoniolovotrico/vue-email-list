@@ -8,14 +8,25 @@
         <title>Griglia-APi</title>
     </head>
     <body>
+        <!-- main div that contains the app centered with flex css property in body-->
         <div id="app">
+
+            <!-- generate square class div according to numArr elements in data of the vue istance -->
             <div v-for="(num,i) in numArr" class="square" :class="num <= 5 && num >= 1 ?'yellow': num >5 && num < 10 ?'green': 'no color'" @click="showFunc(i)">
                 {{num}}
             </div>
+            <!-- //generate square class div according to numArr elements in data of the vue istance -->
 
         </div>
+        <!-- //main div that contains the app centered with flex css property in body-->
+
+        <!-- Axios CDN -->
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!-- VueJs CDN -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        
+        <!-- link to javascript file -->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
